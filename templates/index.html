@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title> Heart Failure Prediction</title>
+
+</head>
+
+<body bgcolor='powderblue' text='red'>
+
+<h1>
+<b>
+<i>
+<font size=15>
+<p  style="color:black;"> Heart Failure Prediction </p>
+</font>
+</i>
+</b>
+</h1>
+
+<hr>
+<hr></div>
+<h4>
+
+<form action="{{url_for('predict')}}" method="post">
+    <p> Age : <input type='text' name='Age' placeholder='Enter age in years only' required='required' /></p>
+    <p>Anaemia : <input type='text' name='Anaemia' placeholder='No-0; Yes-1 ' required='required' /></p>
+
+    <p> Creatinine Phosphokinase level : <input type='text' name='Creatinine Phosphokinase' placeholder='mcg/L' required='required' /></p>
+    <p> Diabetes : <input type='text' name='Diabetes' placeholder='No-0; Yes-1' required='required' /></p>
+    <p>Ejection Fraction : <input type='text' name='Ejection Fraction' placeholder='percentage' required='required' /></p>
+    <p> High Blood Pressure : <input type='text' name='High Blood Pressure' placeholder='No-0; Yes-1' required='required' /></p>
+    <p> Platelets : <input type='text' name='Platelets' placeholder='kiloplatelets/mL' required='required' /></p>
+    <p> Serum creatinine : <input type='text' name='Serum creatinine' placeholder='mg/dL' required='required' /></p>
+    <p> Serum Sodium : <input type='text' name='Serum Sodium' placeholder='mEq/L' required='required' /></p>
+    <p> Sex : <input type='text' name='Sex' placeholder='Female-0; Male-1' required='required' /></p>
+    <p>Smoking : <input type='text' name='Smoking' placeholder='No-0; Yes-1' required='required' /></p>
+     &nbsp;&nbsp;&nbsp;<p> Time : <input type='text' name='Time' placeholder ='Follow-up period (days)' required='required' /></p>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+</h4>
+<h2>
+<b>
+{{ prediction_text }}
+</b>
+</h2>
+</body>
+</html>
